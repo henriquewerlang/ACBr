@@ -47,7 +47,7 @@
 (*//////////////// CONFIGURAÇÕES  ////////////////////*)
 
 // Descomente a linha abaixo, se você quer que seu Executável NÃO dependa das DLLs LibXML2, LibXMLSEC, (NÃO RECOMENDADO)
-{.$DEFINE DFE_SEM_OPENSSL}
+{$DEFINE DFE_SEM_OPENSSL}
 // Comente a linha abaixo, se você quer que seu Executável dependa das DLLs LibXMLSEC (NAO RECOMENDADO)
 {$DEFINE DFE_SEM_XMLSEC}
 // Descomente a linha abaixo, se você quer que seu Executável NÃO dependa das DLLs LibXML2. (NAO RECOMENDADO)
@@ -61,7 +61,7 @@
 // Descomente a linha abaixo, se você deseja que sejam utilizadas as classes baseadas na ACBrXMLDocument
 // Utilização do ACBrXMLDocument obrigatória para as tags da Reforma Tributária nos documentos fiscais
 // se estiver comentado, não será gerado nos XML.
-{$DEFINE USE_ACBr_XMLDOCUMENT}
+{.$DEFINE USE_ACBr_XMLDOCUMENT}
 
 // Descomente essa linha, para usar a carga de DLL tardia, nas Units do OpenSSL  (Apenas Delphi)
 {$DEFINE USE_DELAYED}
