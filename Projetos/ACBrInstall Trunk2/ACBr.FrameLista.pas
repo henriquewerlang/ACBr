@@ -551,7 +551,6 @@ begin
       begin
         ACBr_Integrador_dpk.Checked := True;
         ACBr_PCNComum_dpk.Checked   := True;
-        ACBr_OpenSSL_dpk.Checked    := True;
         ACBr_TCP_dpk.Checked        := True;
       end;
 
