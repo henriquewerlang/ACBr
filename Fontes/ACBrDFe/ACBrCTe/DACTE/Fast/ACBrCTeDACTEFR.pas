@@ -47,7 +47,7 @@ uses
   ACBrUtil.Strings,
   ACBrUtil.FilesIO,
   StrUtils,
-  DB, MaskUtils;
+  DB, MaskUtils, MidasLib;
 
 type
   EACBrCTeDACTEFR = class(Exception);
