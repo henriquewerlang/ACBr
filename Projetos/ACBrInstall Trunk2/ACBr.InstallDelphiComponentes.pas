@@ -522,7 +522,7 @@ begin
     InformaProgresso;
 
     // -- adicionar ao environment variables do delphi
-    if tPlatformAtual = bpWin32 then
+    if tPlatformAtual in [bpWin32, bpWin64] then
     begin
       InformaSituacao('Alterando a variável de ambiente PATH do Delphi...');
       AdicionaEnvironmentPathNaVersaoEspecificaDoDelphi('acbr');
@@ -967,7 +967,7 @@ begin
     // *************************************************************************
     // deixar somente a pasta lib se for configurado assim
     // *************************************************************************
-    if OpcoesInstall.DeixarSomentePastasLib and (tPlatformAtual in [bpWin32{, bpWin64}]) then
+    if OpcoesInstall.DeixarSomentePastasLib and (tPlatformAtual in [bpWin32, bpWin64]) then
     begin
       try
         DeixarSomenteLib;
@@ -1155,7 +1155,7 @@ begin
     // *************************************************************************
     // compilar os pacotes primeiramente
     // *************************************************************************
-    if not (tPlatformAtual in [bpWin32{, bpWin64}]) then
+    if not (tPlatformAtual in [bpWin32, bpWin64]) then
     begin
       InformaSituacao(sLineBreak+'No momento não estamos compilando os pacotes da plataforma ' + sPlatform +'.');
       Exit;
@@ -1173,7 +1173,7 @@ begin
       Exit;
     end;
 
-    if ( tPlatformAtual = bpWin32) then
+    if ( tPlatformAtual in [bpWin32, bpWin64]) then
     begin
       InformaSituacao(sLineBreak+'INSTALANDO OS PACOTES...');
       InstalarPacotes(OpcoesInstall.DiretorioRaizACBr, ListaPacotes);
